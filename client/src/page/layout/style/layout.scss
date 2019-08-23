@@ -16,7 +16,8 @@
 
   #layout-main {
     grid-area: 2/2/3/4;
-    background-color: cornflowerblue;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   #layout-footer {

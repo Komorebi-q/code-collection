@@ -11,7 +11,8 @@ function normalizeRoute(conf) {
     const _route = {
       path: `${path}${route.path === "/" ? "" : "/"}${route.path}`,
       name: route.name,
-      title: route.name
+      title: route.name,
+      icon: route.icon
     };
 
     if (route.children && Array.isArray(route.children)) {
@@ -50,6 +51,9 @@ function Sidebar(props) {
             onClick={onRouteClick.bind(this, r)}
           >
             <NavLink activeClassName="active-nav" exact to={r.path}>
+              <div className="before-box">
+                <i className={`icon iconfont icon-${r.icon}`} />
+              </div>
               {r.name}
             </NavLink>
           </li>

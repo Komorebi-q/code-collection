@@ -1,0 +1,46 @@
+#juejin {
+  padding: 20px;
+}
+
+.list {
+  .list-item {
+    padding-bottom: 30px;
+
+    > a {
+      color: rgba(0, 0, 0, 0.86);
+
+      .box {
+        margin-bottom: 12px;
+
+        .box-item {
+          margin-right: 12px;
+        }
+      }
+
+      .before-box {
+        color: #909090;
+      }
+
+      .content-box {
+        .title {
+          margin-bottom: 12px;
+          font-size: 24px;
+        }
+
+        .description {
+          font-size: 16px;
+        }
+      }
+
+      .after-box {
+        color: #909090;
+
+        .box-item {
+          i {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,7 +3,12 @@ const router = new Router();
 
 router.get("/juejin", async (ctx, next) => {
   try {
-    ctx.body = await ctx.dbModel.Post.find();
+    const res = await ctx.dbModel.Post.find({
+      from: "juejin"
+    });
+    console.log(res[0]);
+
+    ctx.body = res;
   } catch (err) {
     throw err;
   }
