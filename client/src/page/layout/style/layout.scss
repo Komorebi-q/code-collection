@@ -1,0 +1,26 @@
+.layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 90px 1fr 90px;
+  width: 100%;
+  height: 100vh;
+
+  #layout-sidebar {
+    grid-area: 1/1/4/2;
+  }
+
+  #layout-header {
+    grid-area: 1/2/2/4;
+    background-color: chocolate;
+  }
+
+  #layout-main {
+    grid-area: 2/2/3/4;
+    background-color: cornflowerblue;
+  }
+
+  #layout-footer {
+    grid-area: 3/2/4/3;
+    background-color: crimson;
+  }
+}
