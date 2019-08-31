@@ -15,7 +15,6 @@ const loadComponent = ({ component, loading }) =>
       component()
         .then(module => (module.default ? module.default : module))
         .then(Component => {
-          console.log(Component);
           this.setState({
             Comp: Component
           });

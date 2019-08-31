@@ -2,6 +2,7 @@ import React from "react";
 import { Router } from "react-router";
 import { createBrowserHistory } from "history";
 import Layout from "@page/layout/index.jsx";
+import Install from "./install";
 
 import "./../style/index.scss";
 
@@ -15,6 +16,7 @@ class App extends React.Component {
 
     return (
       <Router history={history}>
+        <Install />
         <Layout />
       </Router>
     );

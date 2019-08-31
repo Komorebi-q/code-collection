@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Pagination from "@component/pagination/index.jsx";
 import "./style/index";
 
 class JueJin extends React.Component {
@@ -8,6 +9,7 @@ class JueJin extends React.Component {
   };
 
   async componentDidMount() {
+    // const res = await caches.match("http://localhost:9000/post/juejin");
     const res = await axios.get("http://localhost:9000/post/juejin");
     this.setState({
       data: res.data
@@ -16,8 +18,16 @@ class JueJin extends React.Component {
   }
 
   render() {
+    const paginationConf = {
+      total: 200,
+      current: 1,
+      hideOnSinglePage: true
+    };
+
     return (
       <div id="juejin">
+        <Pagination {...paginationConf} />
+
         <ul className="post-list list">
           {this.state.data.map(post => (
             <li key={post.url + post.title} className="list-item">
